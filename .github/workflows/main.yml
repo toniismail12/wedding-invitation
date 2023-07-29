@@ -47,4 +47,3 @@ jobs:
             docker rmi ${{ vars.IMAGE_NAME }}:latest
             docker pull ${{ vars.IMAGE_NAME }}:latest
             docker run -d --restart=always -p ${{ vars.PORT }}:${{ vars.PORT }} ${{ vars.IMAGE_NAME }}:latest
-            php artisan serve --host=0.0.0.0 --port=${{ vars.PORT }}

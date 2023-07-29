@@ -28,22 +28,3 @@ jobs:
       - name: Push Docker image to DockerHub
         run: |
           docker push ${{ vars.IMAGE_NAME }}:latest
-
-  deployment:
-    needs: build-and-push
-    environment: development
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Setup in Server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SERVER }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD}}
-          port: ${{ secrets.SERVER_PORT }}
-          script: |
-            docker stop $(docker ps -q --filter "publish=5001")
-            docker rm $(docker ps -a -q --filter ancestor=${{ vars.IMAGE_NAME }}:latest)
-            docker rmi ${{ vars.IMAGE_NAME }}:latest
-            docker pull ${{ vars.IMAGE_NAME }}:latest
-            docker run -d --restart=always -p 5001:5001 ${{ vars.IMAGE_NAME }}:latest

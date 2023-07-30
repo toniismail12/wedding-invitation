@@ -15,7 +15,7 @@ jobs:
         run: |
           echo ${{ vars.ENV_FILE }} >> .env
 
-      - name: Build Docker image
+      - name: Build Docker Image
         run: |
           docker build -t ${{ vars.IMAGE_NAME }}:latest .
 
@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Push Docker image to DockerHub
+      - name: Push Docker Image to DockerHub
         run: |
           docker push ${{ vars.IMAGE_NAME }}:latest
 
@@ -46,4 +46,4 @@ jobs:
             docker rm $(docker ps -a -q --filter ancestor=${{ vars.IMAGE_NAME }}:latest)
             docker rmi ${{ vars.IMAGE_NAME }}:latest
             docker pull ${{ vars.IMAGE_NAME }}:latest
-            docker run -d --restart=always -p ${{ vars.PORT }}:${{ vars.PORT }} ${{ vars.IMAGE_NAME }}:latest
+            docker run -d --restart=always -p ${{ vars.PORT }}:80 ${{ vars.IMAGE_NAME }}:latest

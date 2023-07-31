@@ -55,6 +55,19 @@
 				background-attachment: fixed;
 			}
 		}
+
+		.reveal{
+			position: relative;
+			transform: translateY(150px);
+			opacity: 0;
+			transition: 1s all ease;
+		}
+
+		.reveal.active{
+			transform: translateY(0);
+			opacity: 1;
+		}
+		
 	</style>
 
 </head>
@@ -88,10 +101,10 @@
 		</div>
 	</header>
 
-	<div id="content" style="display: none;">
+	<div id="content" style="display: none;" class="reveal">
 
 		<div id="fh5co-services" class="fh5co-section-gray">
-			<div class="container">
+			<div class="container reveal">
 
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -115,7 +128,7 @@
 		</div>
 
 		<div id="fh5co-couple">
-			<div class="container">
+			<div class="container reveal">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<p>Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bpk/ibu/saudara/i di acara pernikahan
@@ -151,7 +164,7 @@
 
 		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
 			<div class="overlay"></div>
-			<div class="container">
+			<div class="container reveal">
 				<div class="row">
 					<div class="col-lg-12 text-center fh5co-heading">
 						<h2 class="fh5co-heading" style="margin-top: 10%;">Countdown</h2>
@@ -166,7 +179,7 @@
 
 		<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
 			<div class="overlay"></div>
-			<div class="container">
+			<div class="container reveal">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h2>Akad & Resepsi</h2>
@@ -180,13 +193,14 @@
 									<div class="event-wrap animate-box">
 										<h3>Akad</h3>
 										<div class="event-col">
+											<i class="icon-calendar"></i>
+											<span>Malam Rabu</span>
+										</div>
+										<div class="event-col">
 											<i class="icon-clock"></i>
 											<span>20:30 - Selesai</span>
 										</div>
-										<div class="event-col">
-											<i class="icon-calendar"></i>
-											<span>Selasa, 22 Agustus 2023</span>
-										</div>
+										
 										<p>di kediaman wanita RT 01 RW 02 desa Sido Makmur jlr 14 Kecamatan Muara
 											Sugihan, Kabupaten Banyuasin</p>
 										<a href="https://goo.gl/maps/BR61HshuhnEVanXAA"
@@ -197,13 +211,14 @@
 									<div class="event-wrap animate-box">
 										<h3>Resepsi</h3>
 										<div class="event-col">
-											<i class="icon-clock"></i>
-											<span>09:00 - Selesai</span>
-										</div>
-										<div class="event-col">
 											<i class="icon-calendar"></i>
 											<span>Rabu, 23 November 2023</span>
 										</div>
+										<div class="event-col">
+											<i class="icon-clock"></i>
+											<span>09:00 - Selesai</span>
+										</div>
+										
 										<p>di kediaman wanita RT 01 RW 02 desa Sido Makmur jlr 14 Kecamatan Muara
 											Sugihan, Kabupaten Banyuasin
 										</p>
@@ -220,7 +235,7 @@
 		</div>
 
 		<div id="fh5co-gallery" class="fh5co-section-gray">
-			<div class="container">
+			<div class="container reveal">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h2>Wedding Gallery</h2>
@@ -231,24 +246,24 @@
 						<ul id="fh5co-gallery-list">
 
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<img src="img/MYD-08627.jpg" alt="img-galery" style="max-width: 100%; height: auto;" />
+								<img src="img/MYD-08627.jpg" alt="img-galery" style="max-width: 100%; height: auto;" class="reveal" />
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<img src="img/MYD-08820.jpg" alt="img-galery" style="max-width: 100%; height: auto;" />
+								<img src="img/MYD-08820.jpg" alt="img-galery" style="max-width: 100%; height: auto;" class="reveal" />
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<img src="img/MYD-08825.jpg" alt="img-galery" style="max-width: 100%; height: auto;" />
+								<img src="img/MYD-08825.jpg" alt="img-galery" style="max-width: 100%; height: auto;" class="reveal" />
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<img src="img/MYD-08918.jpg" alt="img-galery" style="max-width: 100%; height: auto;" />
+								<img src="img/MYD-08918.jpg" alt="img-galery" style="max-width: 100%; height: auto;" class="reveal" />
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
 								<img src="images/gallery-8.jpg" alt="img-galery"
-									style="max-width: 100%; height: auto;" />
+									style="max-width: 100%; height: auto;" class="reveal" />
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
 								<img src="images/gallery-6.jpg" alt="img-galery"
-									style="max-width: 100%; height: auto;" />
+									style="max-width: 100%; height: auto;" class="reveal" />
 							</li>
 
 						</ul>
@@ -259,7 +274,7 @@
 
 		<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 			<div class="overlay"></div>
-			<div class="container">
+			<div class="container reveal">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2>Send Wishes</h2>
@@ -293,7 +308,7 @@
 		</div>
 
 		<div id="fh5co-testimonial">
-			<div class="container">
+			<div class="container reveal">
 				<div class="row">
 					<div class="row animate-box">
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -406,6 +421,27 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script>
+		function reveal() {
+			var reveals = document.querySelectorAll(".reveal");
+
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+
+				if (elementTop < windowHeight - elementVisible) {
+				reveals[i].classList.add("active");
+				} else {
+				reveals[i].classList.remove("active");
+				}
+			}
+		}
+
+		window.addEventListener("scroll", reveal);
+
+	</script>
 
 	<script>
 		// Function to extract URL parameters

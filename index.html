@@ -446,23 +446,17 @@
 			
 			// Call the function to fetch data and populate the HTML
 			getDataAndPopulate();
-		});
-	</script>
-
-	<script>
-		// jQuery script to handle form submission
-		$(document).ready(function () {
 
 			$("#weddingForm").submit(function (event) {
 				event.preventDefault();
 				submitFormToApi();
 			});
-			
+
 			function submitFormToApi() {
 				// Gather form data
 				var formData = {
 					name: $("#name").val(),
-					notes: $("#message").val(),
+					wishes: $("#message").val(),
 					app_id: 1,
 				};
 				
@@ -474,6 +468,7 @@
 					contentType: "application/json; charset=utf-8",
 					dataType: "json",
 					success: function (data) {
+						getDataAndPopulate();
 						console.log("API response:", data);
 						alert("submitted successfully!");
 					},
@@ -484,7 +479,9 @@
 				});
 			}
 		});
+
 	</script>
+
 
 </body>
 

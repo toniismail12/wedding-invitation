@@ -423,7 +423,7 @@
 			function getDataAndPopulate() {
 				$.getJSON(apiUrl, function(data) {
 				// Loop through each wish in the data
-				$.each(data, function(index, wish) {
+				$.each(data.data, function(index, wish) {
 					// Create HTML structure for each wish
 					var wishItem = `
 					<div class="col-lg-4">

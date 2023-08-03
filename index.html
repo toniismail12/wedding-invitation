@@ -423,6 +423,7 @@
 			function getDataAndPopulate() {
 				$.getJSON(apiUrl, function(data) {
 				// Loop through each wish in the data
+				$("#wishesContainer").html("");
 				$.each(data.data, function(index, wish) {
 					// Create HTML structure for each wish
 					var wishItem = `
@@ -439,6 +440,7 @@
 					
 					`;
 					// Append the wish item to the wishesContainer
+
 					$("#wishesContainer").append(wishItem);
 				});
 				});

@@ -10,7 +10,7 @@ function play() {
     } else {
         contentElement.style.display = "none";
     }
-    // playAudio();
+    playAudio();
 }
 
 function playAudio() {

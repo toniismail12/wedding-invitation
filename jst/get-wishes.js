@@ -42,7 +42,8 @@ $(document).ready(function() {
 
     $("#beforepage").click(function () {
         page = page-1
-        getDataAndPopulate(page);
+        page > 1 ? getDataAndPopulate(page) : getDataAndPopulate(1);
+       
     });
 
     $("#weddingForm").submit(function (event) {

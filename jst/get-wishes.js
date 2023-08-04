@@ -35,17 +35,15 @@ $(document).ready(function() {
     // Call the function to fetch data and populate the HTML
     getDataAndPopulate(page);
 
-    function NextPage() {
+    $("#nextpage").click(function () {
         page = page+1
         getDataAndPopulate(page);
-    }
+    });
 
-    function BeforePage() {
-        let p = page-1
-        page = p
-        p > 0 ? getDataAndPopulate(page) : getDataAndPopulate(1);
-        
-    }
+    $("#beforepage").click(function () {
+        page = page-1
+        getDataAndPopulate(page);
+    });
 
     $("#weddingForm").submit(function (event) {
         event.preventDefault();

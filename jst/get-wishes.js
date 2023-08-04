@@ -42,6 +42,9 @@ $(document).ready(function() {
 
     $("#beforepage").click(function () {
         page = page-1
+        if (page < 1) {
+            page = 1;
+        }
         page > 1 ? getDataAndPopulate(page) : getDataAndPopulate(1);
        
     });

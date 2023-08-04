@@ -13,7 +13,7 @@ jobs:
 
       - name: Generate .env
         run: |
-          echo ${{ vars.ENV_FILE }} >> .env
+          echo "${{ vars.ENV_FILE }}" >> .env
 
       - name: Build Docker Image
         run: |
